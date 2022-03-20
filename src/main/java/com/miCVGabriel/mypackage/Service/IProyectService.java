@@ -5,7 +5,7 @@ import com.miCVGabriel.mypackage.Model.Proyect;
 import java.util.List;
 
 public interface IProyectService {
-    public List<Proyect> getProyectsOfUser(Integer userID);
+    public List<Proyect> getProyectsByUser(Integer userID);
 
     public  void saveProyect(Proyect p);
 
