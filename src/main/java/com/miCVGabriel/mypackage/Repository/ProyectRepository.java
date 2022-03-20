@@ -1,2 +1,2 @@
-package com.miCVGabriel.mypackage.Repository;public class ProyectRepository {
+package com.miCVGabriel.mypackage.Repository;public interface ProyectRepository {
 }
