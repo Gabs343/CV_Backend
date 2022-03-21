@@ -17,15 +17,13 @@ public class ProyectService implements IProyectService{
     public List<Proyect> getProyectsByUser(Integer userID){
         List<Proyect> proyectsByUser = new ArrayList<>();
 
-        proyectRepository.findByUserID(userID).forEach(proyectsByUser::add);
+        proyectRepository.findByUser(userID).forEach(proyectsByUser::add);
 
         return proyectsByUser;
     }
 
     @Override
-    public Proyect getProyectByID(Integer id){
-        return proyectRepository.getById(id);
-    }
+    public Proyect getProyectByID(Integer id){ return proyectRepository.getById(id);}
 
     @Override
     public void saveProyect(Proyect p){ proyectRepository.save(p);}

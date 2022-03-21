@@ -30,6 +30,6 @@ public class Proyect {
     private Boolean finished;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "userID", nullable = false, referencedColumnName = "ID")
+    @JoinColumn(name = "userID", nullable = false, referencedColumnName = "id")
     private User user;
 }
