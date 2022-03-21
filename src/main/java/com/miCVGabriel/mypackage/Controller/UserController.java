@@ -18,8 +18,8 @@ public class UserController {
     }
 
     @GetMapping("/users/find/{id}")
-    public User findUser(@PathVariable Integer id){
-        return iUserService.findUser(id);
+    public User getUserByID(@PathVariable Integer id){
+        return iUserService.getUserByID(id);
     }
 
     @PostMapping("/users/create")
@@ -30,7 +30,7 @@ public class UserController {
 
     @PutMapping("/users/edit/{id}")
     public User editUser(@PathVariable Integer id, @RequestBody User u){
-        User editedUser = iUserService.findUser(id);
+        User editedUser = iUserService.getUserByID(id);
 
         editedUser.setImg(u.getImg());
         editedUser.setName(u.getName());

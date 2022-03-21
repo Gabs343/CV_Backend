@@ -16,7 +16,7 @@ public class UserService implements IUserService{
     public List<User> getUsers() {return userRepository.findAll();}
 
     @Override
-    public User findUser(Integer id) {return userRepository.getById(id);}
+    public User getUserByID(Integer id) {return userRepository.getById(id);}
 
     @Override
     public void saveUser(User u) {userRepository.save(u);}
