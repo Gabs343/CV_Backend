@@ -1,6 +1,6 @@
-package com.miCVGabriel.mypackage.Repository;
+package com.miCVGabriel.mypackage.repository;
 
-import com.miCVGabriel.mypackage.Model.User;
+import com.miCVGabriel.mypackage.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

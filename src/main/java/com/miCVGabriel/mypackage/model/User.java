@@ -1,4 +1,4 @@
-package com.miCVGabriel.mypackage.Model;
+package com.miCVGabriel.mypackage.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;

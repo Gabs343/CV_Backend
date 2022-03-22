@@ -1,7 +1,7 @@
-package com.miCVGabriel.mypackage.Controller;
+package com.miCVGabriel.mypackage.controller;
 
-import com.miCVGabriel.mypackage.Model.Proyect;
-import com.miCVGabriel.mypackage.Service.IProyectService;
+import com.miCVGabriel.mypackage.model.Proyect;
+import com.miCVGabriel.mypackage.service.IProyectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,13 +17,13 @@ public class ProyectController {
         return iProyectService.getProyectsByUser(userID);
     }
 
-    @PostMapping("/proyect/create")
+    @PostMapping("/proyects")
     public String createProyect(@RequestBody Proyect p){
         iProyectService.saveProyect(p);
         return "proyect saved";
     }
 
-    @PutMapping("/proyect/edit/{id}")
+    @PutMapping("/proyects/{id}")
     public Proyect editProyect(@PathVariable Integer id, @RequestBody Proyect p){
         Proyect editedProyect = iProyectService.getProyectByID(id);
 
@@ -39,7 +39,7 @@ public class ProyectController {
         return editedProyect;
     }
 
-    @DeleteMapping("/proyect/delete/{id}")
+    @DeleteMapping("/proyects/{id}")
     public String deleteProyect(@PathVariable Integer id){
         iProyectService.deleteProyect(id);
         return "proyect deleted";

@@ -1,7 +1,7 @@
-package com.miCVGabriel.mypackage.Controller;
+package com.miCVGabriel.mypackage.controller;
 
-import com.miCVGabriel.mypackage.Model.User;
-import com.miCVGabriel.mypackage.Service.IUserService;
+import com.miCVGabriel.mypackage.model.User;
+import com.miCVGabriel.mypackage.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,23 +12,23 @@ public class UserController {
     @Autowired
     private IUserService iUserService;
 
-    @GetMapping("/users/findAll")
+    @GetMapping("/users")
     public List<User> findAllUsers(){
         return iUserService.getUsers();
     }
 
-    @GetMapping("/users/find/{id}")
+    @GetMapping("/users/{id}")
     public User getUserByID(@PathVariable Integer id){
         return iUserService.getUserByID(id);
     }
 
-    @PostMapping("/users/create")
+    @PostMapping("/users")
     public String createUser(@RequestBody User u){
         iUserService.saveUser(u);
         return "user saved";
     }
 
-    @PutMapping("/users/edit/{id}")
+    @PutMapping("/users/{id}")
     public User editUser(@PathVariable Integer id, @RequestBody User u){
         User editedUser = iUserService.getUserByID(id);
 
@@ -43,7 +43,7 @@ public class UserController {
         return editedUser;
     }
 
-    @DeleteMapping("/users/delete/{id}")
+    @DeleteMapping("/users/{id}")
     public String deleteUser(@PathVariable Integer id){
         iUserService.deleteUser(id);
         return "User deleted";

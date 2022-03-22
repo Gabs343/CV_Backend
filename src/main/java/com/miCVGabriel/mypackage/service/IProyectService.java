@@ -1,6 +1,6 @@
-package com.miCVGabriel.mypackage.Service;
+package com.miCVGabriel.mypackage.service;
 
-import com.miCVGabriel.mypackage.Model.Proyect;
+import com.miCVGabriel.mypackage.model.Proyect;
 
 import java.util.List;
 

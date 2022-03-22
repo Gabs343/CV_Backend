@@ -1,7 +1,7 @@
-package com.miCVGabriel.mypackage.Service;
+package com.miCVGabriel.mypackage.service;
 
-import com.miCVGabriel.mypackage.Model.Proyect;
-import com.miCVGabriel.mypackage.Repository.ProyectRepository;
+import com.miCVGabriel.mypackage.model.Proyect;
+import com.miCVGabriel.mypackage.repository.ProyectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
