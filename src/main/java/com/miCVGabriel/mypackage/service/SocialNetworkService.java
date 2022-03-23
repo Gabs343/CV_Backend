@@ -1,2 +1,4 @@
-package com.miCVGabriel.mypackage.service;public class SocialNetworkService {
+package com.miCVGabriel.mypackage.service;
+
+public class SocialNetworkService {
 }
