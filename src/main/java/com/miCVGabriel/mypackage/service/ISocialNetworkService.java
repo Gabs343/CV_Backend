@@ -12,5 +12,5 @@ public interface ISocialNetworkService {
 
     public void saveSocialNetwork(SocialNetwork socialNet);
 
-    public void deleteSocialNetwork(SocialNetwork socialNet);
+    public void deleteSocialNetwork(Integer id);
 }

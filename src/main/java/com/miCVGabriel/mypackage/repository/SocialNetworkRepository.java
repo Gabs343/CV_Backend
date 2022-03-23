@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface SocialNetworkRepository extends JpaRepository<SocialNetwork, Integer> {
-    public List<SocialNetwork> findBySocialNetworkByUser(User user);
+    public List<SocialNetwork> findSocialNetworkByUser(User user);
 }
