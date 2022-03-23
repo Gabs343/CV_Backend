@@ -1,10 +1,12 @@
 package com.miCVGabriel.mypackage.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter @Setter @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
@@ -28,4 +30,8 @@ public class User {
 
     @Column(name = "Description", nullable = false)
     private String description;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
+    @JsonManagedReference
+    private List<Proyect> proyects;
 }
