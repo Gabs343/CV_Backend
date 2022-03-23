@@ -1,5 +1,6 @@
 package com.miCVGabriel.mypackage.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,7 +30,8 @@ public class Proyect {
     @Column(name = "Finished", nullable = false)
     private Boolean finished;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "userID", nullable = false, referencedColumnName = "id")
+    @JsonBackReference
     private User user;
 }

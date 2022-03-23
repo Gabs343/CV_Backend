@@ -1,6 +1,7 @@
 package com.miCVGabriel.mypackage.service;
 
 import com.miCVGabriel.mypackage.model.Proyect;
+import com.miCVGabriel.mypackage.model.User;
 import com.miCVGabriel.mypackage.repository.ProyectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ public class ProyectService implements IProyectService{
     private ProyectRepository proyectRepository;
 
     @Override
-    public List<Proyect> getProyectsByUser(Integer userID){
+    public List<Proyect> getProyectsByUser(User userID){
         List<Proyect> proyectsByUser = new ArrayList<>();
 
         proyectRepository.findByUser(userID).forEach(proyectsByUser::add);

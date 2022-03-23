@@ -1,6 +1,7 @@
 package com.miCVGabriel.mypackage.controller;
 
 import com.miCVGabriel.mypackage.model.Proyect;
+import com.miCVGabriel.mypackage.model.User;
 import com.miCVGabriel.mypackage.service.IProyectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ public class ProyectController {
     private IProyectService iProyectService;
 
     @GetMapping("/proyectsByUser/{userID}")
-    public List<Proyect> findProyectsByUser(@PathVariable Integer userID){
+    public List<Proyect> findProyectsByUser(@PathVariable User userID){
         return iProyectService.getProyectsByUser(userID);
     }
 
