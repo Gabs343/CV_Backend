@@ -34,4 +34,8 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
     @JsonManagedReference
     private List<Proyect> proyects;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
+    @JsonManagedReference
+    private  List<SocialNetwork> socialNetworks;
 }
