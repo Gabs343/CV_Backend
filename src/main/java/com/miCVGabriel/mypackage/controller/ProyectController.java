@@ -6,7 +6,7 @@ import com.miCVGabriel.mypackage.service.IProyectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Set;
 
 @RestController
 public class ProyectController {
@@ -14,7 +14,7 @@ public class ProyectController {
     private IProyectService iProyectService;
 
     @GetMapping("/proyectsByUser/{userID}")
-    public List<Proyect> findProyectsByUser(@PathVariable User userID){
+    public Set<Proyect> findProyectsByUser(@PathVariable User userID){
         return iProyectService.getProyectsByUser(userID);
     }
 

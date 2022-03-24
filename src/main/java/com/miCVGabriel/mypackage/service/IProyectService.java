@@ -3,10 +3,10 @@ package com.miCVGabriel.mypackage.service;
 import com.miCVGabriel.mypackage.model.Proyect;
 import com.miCVGabriel.mypackage.model.User;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IProyectService {
-    public List<Proyect> getProyectsByUser(User userID);
+    public Set<Proyect> getProyectsByUser(User userID);
 
     public Proyect getProyectByID(Integer id);
 

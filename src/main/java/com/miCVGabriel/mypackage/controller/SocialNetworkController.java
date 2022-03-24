@@ -6,7 +6,7 @@ import com.miCVGabriel.mypackage.service.ISocialNetworkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Set;
 
 @RestController
 public class SocialNetworkController {
@@ -14,7 +14,7 @@ public class SocialNetworkController {
     private ISocialNetworkService iSocialNetService;
 
     @GetMapping("/socialNetworksByUser/{userID}")
-    public List<SocialNetwork> findSocialNetworksByUser(@PathVariable User userID){
+    public Set<SocialNetwork> findSocialNetworksByUser(@PathVariable User userID){
         return iSocialNetService.getSocialNetworksByUser(userID);
     }
 

@@ -6,8 +6,8 @@ import com.miCVGabriel.mypackage.repository.SocialNetworkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class SocialNetworkService implements ISocialNetworkService{
@@ -15,8 +15,8 @@ public class SocialNetworkService implements ISocialNetworkService{
     private SocialNetworkRepository socialNetworkRepository;
 
     @Override
-    public List<SocialNetwork> getSocialNetworksByUser(User u){
-        List<SocialNetwork> socialNetworksByUser = new ArrayList<>();
+    public Set<SocialNetwork> getSocialNetworksByUser(User u){
+        Set<SocialNetwork> socialNetworksByUser = new HashSet<>();
 
         socialNetworkRepository.findSocialNetworkByUser(u).forEach(socialNetworksByUser::add);
 

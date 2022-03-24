@@ -3,10 +3,10 @@ package com.miCVGabriel.mypackage.service;
 import com.miCVGabriel.mypackage.model.SocialNetwork;
 import com.miCVGabriel.mypackage.model.User;
 
-import java.util.List;
+import java.util.Set;
 
 public interface ISocialNetworkService {
-    public List<SocialNetwork> getSocialNetworksByUser(User u);
+    public Set<SocialNetwork> getSocialNetworksByUser(User u);
 
     public SocialNetwork getSocialNetworkByID(Integer id);
 

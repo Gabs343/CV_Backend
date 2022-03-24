@@ -6,8 +6,8 @@ import com.miCVGabriel.mypackage.repository.ProyectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class ProyectService implements IProyectService{
@@ -15,8 +15,8 @@ public class ProyectService implements IProyectService{
     private ProyectRepository proyectRepository;
 
     @Override
-    public List<Proyect> getProyectsByUser(User userID){
-        List<Proyect> proyectsByUser = new ArrayList<>();
+    public Set<Proyect> getProyectsByUser(User userID){
+        Set<Proyect> proyectsByUser = new HashSet<>();
 
         proyectRepository.findByUser(userID).forEach(proyectsByUser::add);
 
