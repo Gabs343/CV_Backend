@@ -5,7 +5,7 @@ import com.miCVGabriel.mypackage.model.WorkExperience;
 
 import java.util.Set;
 
-public interface IWorkExperience {
+public interface IWorkExperienceService {
     public Set<WorkExperience> getWorkExperiencesByUser(User userID);
 
     public WorkExperience getWorkExperienceByID(Integer id);
