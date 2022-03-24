@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Getter @Setter @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
@@ -33,9 +33,9 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
     @JsonManagedReference
-    private List<Proyect> proyects;
+    private Set<Proyect> proyects;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
     @JsonManagedReference
-    private  List<SocialNetwork> socialNetworks;
+    private Set<SocialNetwork> socialNetworks;
 }
