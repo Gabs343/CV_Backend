@@ -18,7 +18,7 @@ public class ProyectService implements IProyectService{
     public Set<Proyect> getProyectsByUser(User userID){
         Set<Proyect> proyectsByUser = new HashSet<>();
 
-        proyectRepository.findByUser(userID).forEach(proyectsByUser::add);
+        proyectRepository.findProyectsByUser(userID).forEach(proyectsByUser::add);
 
         return proyectsByUser;
     }

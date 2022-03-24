@@ -9,5 +9,5 @@ import java.util.Set;
 
 @Repository
 public interface SocialNetworkRepository extends JpaRepository<SocialNetwork, Integer> {
-    public Set<SocialNetwork> findSocialNetworkByUser(User user);
+    public Set<SocialNetwork> findSocialNetworksByUser(User user);
 }

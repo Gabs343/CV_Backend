@@ -9,5 +9,5 @@ import java.util.Set;
 
 @Repository
 public interface ProyectRepository extends JpaRepository<Proyect, Integer> {
-    public Set<Proyect> findByUser(User user);
+    public Set<Proyect> findProyectsByUser(User user);
 }

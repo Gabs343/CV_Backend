@@ -18,7 +18,7 @@ public class SocialNetworkService implements ISocialNetworkService{
     public Set<SocialNetwork> getSocialNetworksByUser(User u){
         Set<SocialNetwork> socialNetworksByUser = new HashSet<>();
 
-        socialNetworkRepository.findSocialNetworkByUser(u).forEach(socialNetworksByUser::add);
+        socialNetworkRepository.findSocialNetworksByUser(u).forEach(socialNetworksByUser::add);
 
         return socialNetworksByUser;
     }

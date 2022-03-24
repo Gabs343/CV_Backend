@@ -9,5 +9,5 @@ import java.util.Set;
 
 @Repository
 public interface WorkExperienceRepository extends JpaRepository<WorkExperience, Integer> {
-    public Set<WorkExperience> findWorkExperienceByUser(User user);
+    public Set<WorkExperience> findWorkExperiencesByUser(User user);
 }
