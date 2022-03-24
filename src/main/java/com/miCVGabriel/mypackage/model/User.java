@@ -38,4 +38,8 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
     @JsonManagedReference
     private Set<SocialNetwork> socialNetworks;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
+    @JsonManagedReference
+    private Set<WorkExperience> workExperiences;
 }
