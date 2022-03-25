@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Set;
 
 @Repository
-public interface ProyectRepository extends JpaRepository<Proyect, Integer> {
+public interface ProyectRepository extends JpaRepository<Proyect, Long> {
     public Set<Proyect> findProyectsByUser(User user);
 }

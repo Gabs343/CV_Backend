@@ -13,7 +13,7 @@ public class WorkExperienceController {
     @Autowired
     private IWorkExperienceService iWorkExpService;
 
-    @GetMapping("/workExperiencesByUser/{id}")
+    @GetMapping("/workExperiencesByUser/{userID}")
     public Set<WorkExperience> findWorkExperiencesByUser(@PathVariable User userID){
         return iWorkExpService.getWorkExperiencesByUser(userID);
     }
@@ -25,15 +25,15 @@ public class WorkExperienceController {
     }
 
     @PutMapping("/workExperiences/{id}")
-    public WorkExperience editWorkExperience(@PathVariable Integer id, @RequestBody WorkExperience workExp){
+    public WorkExperience editWorkExperience(@PathVariable Long id, @RequestBody WorkExperience workExp){
         WorkExperience editedWorkExp = iWorkExpService.getWorkExperienceByID(id);
 
         editedWorkExp.setChargeName(workExp.getChargeName());
         editedWorkExp.setCompany(workExp.getCompany());
         editedWorkExp.setImg(workExp.getImg());
         editedWorkExp.setEntry(workExp.getEntry());
-        editedWorkExp.setExit(workExp.getExit());
-        editedWorkExp.setCurrent(workExp.getCurrent());
+        editedWorkExp.setWayOut(workExp.getWayOut());
+        editedWorkExp.setPresentDay(workExp.getPresentDay());
         editedWorkExp.setDescription(workExp.getDescription());
         editedWorkExp.setUser(workExp.getUser());
 
@@ -41,7 +41,7 @@ public class WorkExperienceController {
     }
 
     @DeleteMapping("/workExperiences/{id}")
-    public String deleteWorkExperience(@PathVariable Integer id){
+    public String deleteWorkExperience(@PathVariable Long id){
         iWorkExpService.deleteWorkExperience(id);
         return "work experience deleted";
     }

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Set;
 
 @Repository
-public interface WorkExperienceRepository extends JpaRepository<WorkExperience, Integer> {
+public interface WorkExperienceRepository extends JpaRepository<WorkExperience, Long> {
     public Set<WorkExperience> findWorkExperiencesByUser(User user);
 }

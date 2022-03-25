@@ -1,6 +1,7 @@
 package com.miCVGabriel.mypackage.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,11 +11,12 @@ import java.util.Date;
 
 @Getter @Setter @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+@Table(name = "work_experiences")
 public class WorkExperience {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Integer id;
+    private Long id;
 
     @Column(name = "Charge_Name", length = 75, nullable = false)
     private String chargeName;
@@ -26,13 +28,15 @@ public class WorkExperience {
     private String img;
 
     @Column(name = "Entry", nullable = false)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date entry;
 
-    @Column(name = "Exit")
-    private Date exit;
+    @Column(name = "Way_Out")
+    @JsonFormat(pattern = "yyyy/MM/dd")
+    private Date wayOut;
 
-    @Column(name = "Current", nullable = false)
-    private Boolean current;
+    @Column(name = "Present_Day", nullable = false)
+    private Boolean presentDay;
 
     @Column(name = "Description", nullable = false)
     private String description;

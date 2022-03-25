@@ -25,7 +25,7 @@ public class ProyectController {
     }
 
     @PutMapping("/proyects/{id}")
-    public Proyect editProyect(@PathVariable Integer id, @RequestBody Proyect p){
+    public Proyect editProyect(@PathVariable Long id, @RequestBody Proyect p){
         Proyect editedProyect = iProyectService.getProyectByID(id);
 
         editedProyect.setImg(p.getImg());
@@ -41,7 +41,7 @@ public class ProyectController {
     }
 
     @DeleteMapping("/proyects/{id}")
-    public String deleteProyect(@PathVariable Integer id){
+    public String deleteProyect(@PathVariable Long id){
         iProyectService.deleteProyect(id);
         return "proyect deleted";
     }

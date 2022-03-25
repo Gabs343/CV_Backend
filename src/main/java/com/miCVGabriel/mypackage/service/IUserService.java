@@ -9,7 +9,7 @@ public interface IUserService {
 
     public void saveUser(User u);
 
-    public void deleteUser(Integer id);
+    public void deleteUser(Long id);
 
-    public User getUserByID(Integer id);
+    public User getUserByID(Long id);
 }

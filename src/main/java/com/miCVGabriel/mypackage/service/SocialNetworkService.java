@@ -24,7 +24,7 @@ public class SocialNetworkService implements ISocialNetworkService{
     }
 
     @Override
-    public SocialNetwork getSocialNetworkByID(Integer id){
+    public SocialNetwork getSocialNetworkByID(Long id){
         return socialNetworkRepository.getById(id);
     }
 
@@ -34,7 +34,7 @@ public class SocialNetworkService implements ISocialNetworkService{
     }
 
     @Override
-    public void deleteSocialNetwork(Integer id){
+    public void deleteSocialNetwork(Long id){
         socialNetworkRepository.deleteById(id);
     }
 }

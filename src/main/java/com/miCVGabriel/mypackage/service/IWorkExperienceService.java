@@ -8,9 +8,9 @@ import java.util.Set;
 public interface IWorkExperienceService {
     public Set<WorkExperience> getWorkExperiencesByUser(User userID);
 
-    public WorkExperience getWorkExperienceByID(Integer id);
+    public WorkExperience getWorkExperienceByID(Long id);
 
     public void saveWorkExperience(WorkExperience workExp);
 
-    public void deleteWorkExperience(Integer id);
+    public void deleteWorkExperience(Long id);
 }

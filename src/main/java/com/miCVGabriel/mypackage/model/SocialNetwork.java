@@ -9,11 +9,12 @@ import javax.persistence.*;
 
 @Getter @Setter @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+@Table(name = "social_networks")
 public class SocialNetwork {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    @Column(name = "ID")
-   private Integer id;
+   private Long id;
 
    @Column(name = "Name", length = 55, nullable = false)
    private String name;

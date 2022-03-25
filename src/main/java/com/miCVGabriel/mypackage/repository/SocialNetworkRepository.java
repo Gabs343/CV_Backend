@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Set;
 
 @Repository
-public interface SocialNetworkRepository extends JpaRepository<SocialNetwork, Integer> {
+public interface SocialNetworkRepository extends JpaRepository<SocialNetwork, Long> {
     public Set<SocialNetwork> findSocialNetworksByUser(User user);
 }

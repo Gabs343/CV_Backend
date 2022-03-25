@@ -16,11 +16,11 @@ public class UserService implements IUserService{
     public List<User> getUsers() {return userRepository.findAll();}
 
     @Override
-    public User getUserByID(Integer id) {return userRepository.getById(id);}
+    public User getUserByID(Long id) {return userRepository.getById(id);}
 
     @Override
     public void saveUser(User u) {userRepository.save(u);}
 
     @Override
-    public void deleteUser(Integer id) {userRepository.deleteById(id);}
+    public void deleteUser(Long id) {userRepository.deleteById(id);}
 }

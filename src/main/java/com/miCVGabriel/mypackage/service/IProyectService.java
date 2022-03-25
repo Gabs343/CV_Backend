@@ -8,9 +8,9 @@ import java.util.Set;
 public interface IProyectService {
     public Set<Proyect> getProyectsByUser(User userID);
 
-    public Proyect getProyectByID(Integer id);
+    public Proyect getProyectByID(Long id);
 
     public  void saveProyect(Proyect p);
 
-    public void deleteProyect(Integer id);
+    public void deleteProyect(Long id);
 }

@@ -25,7 +25,7 @@ public class SocialNetworkController {
     }
 
     @PutMapping("/socialNetworks/{id}")
-    public SocialNetwork editSocialNetwork(@PathVariable Integer id, @RequestBody SocialNetwork socialNet){
+    public SocialNetwork editSocialNetwork(@PathVariable Long id, @RequestBody SocialNetwork socialNet){
         SocialNetwork editedSocialNet = iSocialNetService.getSocialNetworkByID(id);
 
         editedSocialNet.setName(socialNet.getName());
@@ -39,7 +39,7 @@ public class SocialNetworkController {
     }
 
     @DeleteMapping("/socialNetworks/{id}")
-    public String deleteSocialNetwork(@PathVariable Integer id){
+    public String deleteSocialNetwork(@PathVariable Long id){
         iSocialNetService.deleteSocialNetwork(id);
         return "social network deleted";
     }

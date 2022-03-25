@@ -24,7 +24,7 @@ public class WorkExperienceService implements IWorkExperienceService {
     }
 
     @Override
-    public WorkExperience getWorkExperienceByID(Integer id){
+    public WorkExperience getWorkExperienceByID(Long id){
        return  workExpRepository.getById(id);
     }
 
@@ -34,7 +34,7 @@ public class WorkExperienceService implements IWorkExperienceService {
     }
 
     @Override
-    public void deleteWorkExperience(Integer id){
+    public void deleteWorkExperience(Long id){
         workExpRepository.deleteById(id);
     }
 }

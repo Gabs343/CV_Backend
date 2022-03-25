@@ -18,7 +18,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
-    public User getUserByID(@PathVariable Integer id){
+    public User getUserByID(@PathVariable Long id){
         return iUserService.getUserByID(id);
     }
 
@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @PutMapping("/users/{id}")
-    public User editUser(@PathVariable Integer id, @RequestBody User u){
+    public User editUser(@PathVariable Long id, @RequestBody User u){
         User editedUser = iUserService.getUserByID(id);
 
         editedUser.setImg(u.getImg());
@@ -44,7 +44,7 @@ public class UserController {
     }
 
     @DeleteMapping("/users/{id}")
-    public String deleteUser(@PathVariable Integer id){
+    public String deleteUser(@PathVariable Long id){
         iUserService.deleteUser(id);
         return "User deleted";
     }

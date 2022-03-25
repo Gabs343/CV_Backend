@@ -8,9 +8,9 @@ import java.util.Set;
 public interface ISocialNetworkService {
     public Set<SocialNetwork> getSocialNetworksByUser(User u);
 
-    public SocialNetwork getSocialNetworkByID(Integer id);
+    public SocialNetwork getSocialNetworkByID(Long id);
 
     public void saveSocialNetwork(SocialNetwork socialNet);
 
-    public void deleteSocialNetwork(Integer id);
+    public void deleteSocialNetwork(Long id);
 }

@@ -10,11 +10,12 @@ import java.util.Set;
 
 @Getter @Setter @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Integer id;
+    private Long id;
 
     @Column(name = "Name", length = 55, nullable = false)
     private String name;

@@ -24,12 +24,12 @@ public class ProyectService implements IProyectService{
     }
 
     @Override
-    public Proyect getProyectByID(Integer id){ return proyectRepository.getById(id);}
+    public Proyect getProyectByID(Long id){ return proyectRepository.getById(id);}
 
     @Override
     public void saveProyect(Proyect p){ proyectRepository.save(p);}
 
     @Override
-    public void deleteProyect(Integer id){ proyectRepository.deleteById(id);}
+    public void deleteProyect(Long id){ proyectRepository.deleteById(id);}
 
 }
