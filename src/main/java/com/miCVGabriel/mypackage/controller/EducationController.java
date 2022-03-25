@@ -1,14 +1,22 @@
 package com.miCVGabriel.mypackage.controller;
 
 import com.miCVGabriel.mypackage.model.Education;
+import com.miCVGabriel.mypackage.model.User;
 import com.miCVGabriel.mypackage.service.IEducationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Set;
 
 @RestController
 public class EducationController {
     @Autowired
     private IEducationService iEducationService;
+
+    @GetMapping("/educationsByUser/{userID}")
+    public Set<Education> findEducationsByUser(@PathVariable User userID){
+        return iEducationService.getEducationsByUser(userID);
+    }
 
     @PostMapping("/educations")
     public String createEducation(@RequestBody Education education){
