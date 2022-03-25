@@ -8,7 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Getter @Setter @Entity
-@Table(name = "Skills")
+@Table(name = "skills")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Skill {
     @Id
