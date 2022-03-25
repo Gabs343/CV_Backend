@@ -3,12 +3,14 @@ package com.miCVGabriel.mypackage.service;
 import com.miCVGabriel.mypackage.model.Education;
 import com.miCVGabriel.mypackage.model.User;
 import com.miCVGabriel.mypackage.repository.EducationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class EducationService implements IEducationService{
-    public EducationRepository educationRepository;
+    @Autowired
+    private EducationRepository educationRepository;
 
     @Override
     public Set<Education> getEducationsByUser(User userID) {
