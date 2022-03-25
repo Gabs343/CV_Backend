@@ -1,2 +1,4 @@
-package com.miCVGabriel.mypackage.model;public class Education {
+package com.miCVGabriel.mypackage.model;
+
+public class Education {
 }
