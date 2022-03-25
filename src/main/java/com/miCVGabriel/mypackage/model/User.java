@@ -1,5 +1,6 @@
 package com.miCVGabriel.mypackage.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
@@ -47,4 +48,8 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
     @JsonManagedReference
     private Set<Education> educations;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER, orphanRemoval = true)
+    @JsonBackReference
+    private  Set<Skill> skills;
 }
